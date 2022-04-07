@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery初识</title>
+    通过网络引入或者通过本地引入
+    <script src = "xxxxxx.js"></script>
+</head>
+<body>
+<!-- 
+    公式：$(CSS选择器).action()
+    如：
+    $('p').click();
+    $('#id1').click();
+    $('.classname1').click();   
+    ...
+    action()表示jQuery事件,分为鼠标事件、键盘事件、其他事件
+ -->
+ <a href="" id="test-jQuery">点我</a>
+ <script>
+     // 没使用公式
+     var id = document.getElementById('test-jQuery');
+       id.click(function(){
+        alert('hello');
+       });
+     // 使用公式jQuery
+     $('#test-jQuery').click(function(){
+        alert('hello');
+     });
+    //  节点文本操作---操作DOM
+    $('#test-ul li[name=python]').text(); // 获得值
+    $('#test-ul li[name=python]').text('设置值'); // 设置值
+    $('#test-ul').html(); // 获得值
+    $('#test-ul').html('<strong>123</strong>'); // 设置值
+    // css的操作
+    // 标签的显示和隐藏：本质dispalay:none；
+    $('#test-ul li[name=python]').show();
+    $('#test-ul li[name=python]').hide();
+ </script>
+</body>
+</html>
+
